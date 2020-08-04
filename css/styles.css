@@ -475,3 +475,23 @@ th {
 .flex-xs-column {
   flex-direction: column;
 }
+
+/* Contact Style */
+
+.vl {
+  border-left: 4px solid black;
+  height: 156px;
+  position: absolute;
+  margin-left: 0px;
+}
+#text {
+  margin-left: 2.5%;
+  width: 95%;
+}
+.vertical-line {
+  border-left: 4px solid rgb(206, 206, 2);
+  height: 5%;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 10%;
+}
