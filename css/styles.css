@@ -344,3 +344,38 @@ h3 {
 h2 {
   font-size: 45px;
 }
+
+/* Portfolio Style */
+
+.card {
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover img {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+.portfolio {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  display: none;
+  transition: all 0.7s ease;
+}
+.portfoliotag {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px 10px;
+  padding-top: 30px;
+  border: 2px solid whitesmoke;
+  font-size: 1.2em;
+  line-height: 90%;
+  margin: 20% 5%;
+  overflow: hidden;
+  letter-spacing: 2px;
+  font-weight: 100%;
+  font-family: "New Rocker", cursive;
+}
