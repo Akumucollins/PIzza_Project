@@ -282,3 +282,31 @@ a.article:hover {
   margin-left: 1%;
   height: 6%;
 }
+
+/* Our Mission Style */
+
+#ourMission {
+  background-image: url("../images/bg_2.png");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.mission-text {
+  margin-left: 64%;
+  font-size: 35px;
+}
+.our-mission {
+  display: flex;
+}
+.paragraph-mission {
+  margin-top: 4%;
+}
+.mission p {
+  font-size: 25px;
+}
+#vertix {
+  margin-left: 0.3%;
+  margin-top: -4%;
+  font-size: 16px;
+  height: 4%;
+}
