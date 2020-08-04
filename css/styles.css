@@ -314,8 +314,8 @@ a.article:hover {
 /* Menu Style */
 #menu {
   background-size: cover;
-  background-image: url("/images/menu.jpeg");
-  height: 197vh;
+  background-image: url("../images/menu.jpeg");
+  height: 182vh;
   border-radius: 20px;
 }
 .img {
@@ -378,4 +378,46 @@ h2 {
   letter-spacing: 2px;
   font-weight: 100%;
   font-family: "New Rocker", cursive;
+}
+
+/* Placing Order Style */
+
+.order h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.order {
+  background-attachment: fixed;
+  background-image: url("../images/background_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  font-size: 20px;
+}
+.order-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-bottom: 20px;
+  padding-left: 6%;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.topping {
+  display: flex;
+  font-size: 16.5px;
+}
+.type,
+.size,
+.crust {
+  font-size: 25px;
 }

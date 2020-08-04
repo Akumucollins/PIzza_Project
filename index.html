@@ -308,7 +308,7 @@
                         <img src="images/image2.jpeg" alt="pizza" class="card-img-top">
                         <div class="portfolio">
                             <p class="portfoliotag font-weight-bold text-uppercase text-center">Capricciosa
-                               <br><br>Pizza</p>
+                                <br><br>Pizza</p>
                         </div>
                     </div>
                 </div>
@@ -317,7 +317,7 @@
                         <img src="images/image3.jpeg" alt="pizza" class="card-img-top">
                         <div class="portfolio">
                             <p class="portfoliotag font-weight-bold text-uppercase text-center">Vegetariana
-                               <br><br>Pizza</p>
+                                <br><br>Pizza</p>
                         </div>
                     </div>
                 </div>
@@ -361,7 +361,7 @@
                         <img src="images/image8.jpeg" alt="pizza" class="card-img-top" height=230px>
                         <div class="portfolio">
                             <p class="portfoliotag font-weight-bold text-uppercase text-center">Truffled Chicken
-                               <br><br>Pizza</p>
+                                <br><br>Pizza</p>
                         </div>
                     </div>
                 </div>
@@ -378,7 +378,7 @@
                         <img src="images/image10.jpeg" alt="pizza" class="card-img-top">
                         <div class="portfolio">
                             <p class="portfoliotag font-weight-bold text-uppercase text-center">Steak Crusted
-                               <br><br>Pizza</p>
+                                <br><br>Pizza</p>
                         </div>
                     </div>
                 </div>
@@ -404,6 +404,125 @@
         </div>
     </div>
     <!--End Of Portfolio Section-->
+    <!--Placing Your Order Section-->
+    <div class="container-fluid order" id="make-order">
+        <h2 class="text-warning font-weight-bold text-center">Order your pizza here and we will deliver it to you at
+            your door step!</h2>
+        <div class="order-overlay">
+            <div class="controls-top" id="Order-now">
+                <form>
+                    <!--Pizza Type-->
+                    <label for="select" class="pt-3 type">Select Your Favorite Pizza Here:</label>
+                    <select class="browser-default custom-select custom-select-lg mb-3 " id="type">
+                        <option value="type">Pizza-Type</option>
+                        <option value="Margherita Pizza">Margherita Pizza</option>
+                        <option value="Capricciosa Pizza">Capricciosa Pizza</option>
+                        <option value="Vegetariana Pizza">Vegetariana Pizza</option>
+                        <option value="Marinara Pizza">Marinara Pizza</option>
+                        <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+                        <option value="Napolitana Pizza">Napolitana Pizza</option>
+                        <option value="Funchi Pizza">Funchi Pizza</option>
+                        <option value="Truffled-Chicken Pizza">Truffled Chicken Pizza</option>
+                        <option value="Mussles Pizza">Mussles Pizza</option>
+                        <option value="Steak-Crusted Pizza">Steak Crusted</option>
+                        <option value="Chicken-Farro Pizza">Chicken Farro</option>
+                        <option value="Black-Pepper Pizza">Black Pepper Pizza</option>
+                    </select>
+                    <!-- End  Of Pizza Type-->
+                    <!--Pizza Size-->
+                    <label for="select" class="pt-3 size">Select Your Favorite Pizza-Size Here:</label>
+                    <select class="browser-default custom-select custom-select-lg mb-3" id="size">
+                        <option value="0">Pizza-Size</option>
+                        <option value="Small">Small---ksh.1000</option>
+                        <option value="Medium">Medium--Ksh.1200</option>
+                        <option value="Large">Large---Ksh.1500</option>
+                    </select>
+                    <!-- End  Of Pizza Size-->
+                    <!--Pizza Crusts-->
+                    <label for="crust" class="pt-3 crust">Select Your Favorite Pizza-Crusts Here:</label>
+                    <select class="browser-default custom-select custom-select-lg mb-3" id="crust">
+                        <option value="0">Pizza-Crust</option>
+                        <option value="Thick-Classic">Thick-Classic---Ksh.150</option>
+                        <option value="Cheese-Filled">Cheese-Filled---Ksh.180</option>
+                        <option value="Pescara">Pescara---Ksh.120</option>
+                        <option value="Deep-Dish">Deep-Dish---Ksh.150</option>
+                        <option value="Gluten-Free">Gluten-Free---Ksh.130</option>
+                        <option value="Cripsy">Cripsy---Ksh.200</option>
+                        <option value="Stuffed">Stuffed---Ksh.160</option>
+                    </select>
+                    <!--End Of Pizza Crusts-->
+                    <br>
+                    <!--Pizza Toppings-->
+                    <label for="Toppings">Select Your Favorite Pizza-Toppings Here @ ksh. 150 each :</label>
+                    <br>
+                    <div class="topping">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Romanie" value="Romanie"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Romanie">Romanie</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Black-Olives"
+                                        value="Black-Olives" name="toppings">
+                                    <label class="custom-control-label" for="Black-Olives">Black-Olives</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Pineapple" value="Pineapple"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Pineapple">Pineapple</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Sausage">Sausage</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Extra-Cheese"
+                                        value="Extra-Cheese" name="toppings">
+                                    <label class="custom-control-label" for="Extra-Cheese">Extra-Cheese</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Pepperoni" value="Pepperoni"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Pepperoni">Pepperoni</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Spinach" value="Spinach"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Spinach">Spinach</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Green-Peppers"
+                                        value="Green-Peppers" name="toppings">
+                                    <label class="custom-control-label" for="Green-Peppers">GreenPepper</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Pizza Toppings-->
+                    <br>
+                    <button type="submit" class="btn btn-warning proceed">Check Your Order</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Placing Your Order Section-->
 
     <!-- jQuery CDN -->
     <script src="js/jQuery.js"></script>
