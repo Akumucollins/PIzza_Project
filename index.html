@@ -523,7 +523,52 @@
         </div>
     </div>
     <!-- End Of Placing Your Order Section-->
-
+    <!--Placed Order Summary Validation Section-->
+    <div class="containe-fluid text-center">
+        <div class="yourChoice">
+            <h2>Your Order is:</h2>
+            <div id="yourOrder">
+                <table class="table table-md  pizzatable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Pizza-Type</th>
+                            <th scope="col">Pizza-Size</th>
+                            <th scope="col">Pizza-Crust</th>
+                            <th scope="col">Pizza-Topping</th>
+                            <th scope="col">Your-Bill</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersmade">
+                        <tr>
+                            <td id="pizzatype"></td>
+                            <td id="pizzasize"></td>
+                            <td id="pizzacrust"></td>
+                            <td id="pizzatopping"></td>
+                            <td id="yourbill"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p>
+                <p id="additionalprice">Delivery will cost sh. 500</p>
+                <p id="finalmessage"></p>
+            </div>
+            <button class="btn btn-orange qty">Quantity</button>
+            <button class="btn btn-orange" id="checkout">Checkout</button>
+            <button class="btn btn-orange delivery">On Delivery</button>
+        </div>
+        <div id="delivery">
+            <form class="bg-dark border-radius-20px">
+                <div class="form-group">
+                    <input type="text" id="name" class="form-control mb-3" placeholder=" Enter Your Fullname...">
+                    <input type="number" id="phone" class="form-control mb-3" placeholder=" Enter Your Phone Number...">
+                    <input type="text" id="address" class="form-control mb-3" placeholder=" Enter Your Address...">
+                    <button class="btn btn-orange" id="final-order">Place Your Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <!-- jQuery CDN -->
     <script src="js/jQuery.js"></script>
     <!-- Bootstrap Js CDN -->

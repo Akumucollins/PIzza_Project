@@ -421,3 +421,57 @@ h2 {
 .crust {
   font-size: 25px;
 }
+
+/* Order Summary Style */
+.yourChoice {
+  display: none;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: black;
+}
+.delivery {
+  display: none;
+}
+#delivery {
+  display: none;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+td,
+th {
+  font-size: 25px;
+  color: black;
+}
+.yourChoice h2 {
+  color: yellow;
+  text-align: left;
+}
+#yourOrders {
+  color: black;
+  font-size: 30px;
+}
+
+#additionalprice {
+  display: none;
+}
+#finalmessage {
+  display: none;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+  font-size: 28px;
+}
+
+@media only screen and (max-width: 485px) {
+  .flex-xs-column {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section {
+    padding-top: 30px;
+  }
+}
+.flex-xs-column {
+  flex-direction: column;
+}
