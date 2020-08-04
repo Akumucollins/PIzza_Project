@@ -213,3 +213,30 @@ a.article:hover {
   margin-top: -25%;
   font-size: 40px;
 }
+
+/*Purpose Page Section*/
+.ourPurpose {
+  display: flex;
+}
+.img-Purpose {
+  padding-top: -5%;
+}
+.ourPurpose p {
+  margin-top: -2%;
+}
+.purpose p {
+  margin-top: 3%;
+  font-size: 25px;
+}
+#ourPurpose {
+  background-image: url("../images/background_1.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+#vl {
+  margin-top: -3%;
+  font-size: 16px;
+  height: 4%;
+  margin-left: 33.4%;
+}
