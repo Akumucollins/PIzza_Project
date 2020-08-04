@@ -196,7 +196,9 @@ a.article:hover {
 .navbar {
   opacity: 0.9;
 }
+
 /*Home Page Style*/
+
 #header {
   background-size: cover;
   background-image: url("../images/background_image1.png");
@@ -214,7 +216,8 @@ a.article:hover {
   font-size: 40px;
 }
 
-/*Purpose Page Section*/
+/*Purpose Page Style*/
+
 .ourPurpose {
   display: flex;
 }
@@ -236,7 +239,46 @@ a.article:hover {
 }
 #vl {
   margin-top: -3%;
-  font-size: 16px;
-  height: 4%;
-  margin-left: 33.4%;
+  font-size: 14px;
+  height: 7%;
+  margin-left: 33%;
+  color: grey;
+}
+
+/* About Us Style */
+
+#aboutUs {
+  background-size: cover;
+  height: 100vh;
+  background-color: beige;
+  border-radius: 20px;
+}
+.about {
+  font-size: 18px;
+}
+.us {
+  font-size: 15px;
+}
+.images {
+  display: flex;
+  margin-top: 1%;
+}
+.image-one {
+  position: relative;
+  z-index: 1;
+  top: 40%;
+  margin-left: 10%;
+  height: 350px;
+}
+.image-two {
+  position: absolute;
+  left: 40%;
+  height: 350px;
+}
+.aboutus {
+  padding-left: 10%;
+}
+#vertical {
+  margin-left: 1%;
+  height: 6%;
 }
