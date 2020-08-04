@@ -207,6 +207,7 @@ a.article:hover {
   height: 100vh;
   border-radius: 20px;
   padding-top: 35%;
+  font-family: "Poppins", sans-serif;
 }
 #header h3 {
   font-size: 90px;
@@ -222,7 +223,7 @@ a.article:hover {
   display: flex;
 }
 .img-Purpose {
-  padding-top: -5%;
+height: 470px;
 }
 .ourPurpose p {
   margin-top: -2%;
@@ -231,18 +232,16 @@ a.article:hover {
   margin-top: 3%;
   font-size: 25px;
 }
+.purpose h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 55px;
+}
 #ourPurpose {
   background-image: url("../images/background_1.jpeg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
-}
-#vl {
-  margin-top: -3%;
-  font-size: 14px;
-  height: 7%;
-  margin-left: 33%;
-  color: grey;
+  font-family: "Poppins", sans-serif;
 }
 
 /* About Us Style */
@@ -252,6 +251,7 @@ a.article:hover {
   height: 100vh;
   background-color: beige;
   border-radius: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .about {
   font-size: 18px;
@@ -290,6 +290,7 @@ a.article:hover {
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 .mission-text {
   margin-left: 64%;
@@ -304,6 +305,10 @@ a.article:hover {
 .mission p {
   font-size: 25px;
 }
+.mission h2 {
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 #vertix {
   margin-left: 0.3%;
   margin-top: -4%;
@@ -317,6 +322,7 @@ a.article:hover {
   background-image: url("../images/menu.jpeg");
   height: 182vh;
   border-radius: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .img {
   margin-top: -12%;
@@ -337,12 +343,14 @@ h3 {
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 .vision p {
   font-size: 35px;
 }
-h2 {
-  font-size: 45px;
+.vision h2 {
+  font-size: 75px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Portfolio Style */
@@ -397,6 +405,7 @@ h2 {
   padding-top: 4%;
   padding-bottom: 4%;
   font-size: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .order-overlay {
   background-color: rgba(0, 0, 0, 0.9);
@@ -420,6 +429,7 @@ h2 {
 .size,
 .crust {
   font-size: 22px;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Order Summary Style */
@@ -441,6 +451,7 @@ td,
 th {
   font-size: 25px;
   color: black;
+  font-family: "Poppins", sans-serif;
 }
 .yourChoice h2 {
   color: yellow;
@@ -460,6 +471,7 @@ th {
   padding-right: 10%;
   padding-left: 10%;
   font-size: 28px;
+  font-family: "Poppins", sans-serif;
 }
 
 @media only screen and (max-width: 485px) {
@@ -489,9 +501,13 @@ th {
   width: 95%;
 }
 .vertical-line {
-  border-left: 4px solid rgb(206, 206, 2);
+  border-left: 4px solid rgb(85, 85, 85);
   height: 5%;
   position: absolute;
   margin-left: 40%;
   margin-top: 10%;
 }
+button {
+  border: none;
+}
+
