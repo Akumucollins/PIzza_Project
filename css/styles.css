@@ -310,3 +310,22 @@ a.article:hover {
   font-size: 16px;
   height: 4%;
 }
+
+/* Menu Style */
+#menu {
+    background-size: cover;
+    background-image: url("/images/menu.jpeg");
+    height: 197vh;
+    border-radius: 20px;
+  }
+  .img {
+    margin-top: -12%;
+  }
+  .title-underline {
+    width: 100px;
+    height: 3px;
+    margin: 0 auto;
+  }
+  h3 {
+    color: white;
+  }
