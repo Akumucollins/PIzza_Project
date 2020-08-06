@@ -46,11 +46,9 @@ This is a web application for **Mustachio Pizzeria** which is a pizza selling ve
 | Select Pizza-Size | small, Medium, Large |  Large |
 | Select Pizza-Crust |  Either Cripsy,Stuffed or Gluten-Free |  Gluten-Free |
 | select Pizza-Toppings |  Select the Checkbox of all the topppings you want | Mushrooms |
-| Press Check Your Order button |   Select Your Order  | Table of your Selected Order with the total price|
-| Press Quantity button | Pizza-Type,Pizza-Size, Pizza-Crust and Pizza-Toppings | new Quantity is added onto the table|
-| Press Checkout | Selected Order | Your bill is ...|
-| Press On Delivery | Your Fullname, Phone Number and Address | [input#name], [input#address] |
-| Press Your Order|Your Fullname, Phone Number and Address | We [input#name], Mustachio Pizzeria Management has recieved your order and it will be delivered to you at [input#address]. Your Final Bill [button#checkout].|
+| Press Check Your Order button |   Select Self Pick-up  | Your Order is Ksh. |
+| Press Check Your Order button |   Select On-Demand Delivery  | Your Order is Ksh.  plus a charge of ksh. 300 |
+| Press Check Your Order button |   Select Scheduled  On-Demand Delivery  | Your Order is Ksh.  plus a cherge of Ksh. 500|
 
 
 ---
