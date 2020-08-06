@@ -28,249 +28,110 @@ $(document).ready(function () {
   });
 });
 
-/*Business Logic Function */
-var price, pizza_crust, pizza_topping;
-let total = 0;
-function Order(type, size, crust, topping, total) {
-  this.type = type;
-  this.size = size;
-  this.crust = crust;
-  this.topping = topping;
-  this.total = total;
-}
-
-// proceed button
+/*Form Validation Function */
 $(document).ready(function () {
-  $("button.proceed").click(function (event) {
-    let Ptype = $("#type  option:selected").val();
-    let psize = $("#size option:selected").val();
-    let pcrust = $("#crust option:selected").val();
-    let ptopping = [];
-    $.each($("input[name='toppings']:checked"), function () {
-      ptopping.push($(this).val());
-    });
-    console.log(ptopping.join(", "));
-
-    switch (psize) {
-      case "0":
-        price = 0;
-        break;
-      case "Small":
-        price = 1000;
-        console.log(price);
-        break;
-      case "Medium":
-        price = 1200;
-        console.log(price);
-        break;
-      case "Large":
-        price = 1500;
-        console.log(price);
-      default:
-        console.log(error);
-    }
-    switch (pcrust) {
-      case "0":
-        pizza_crust = 0;
-        break;
-      case "Thick-Classic":
-        pizza_crust = 150;
-        break;
-      case "Cheese-Filled":
-        pizza_crust = 180;
-        break;
-      case "Pescara":
-        pizza_crust = 120;
-        break;
-      case "Deep-Dish":
-        pizza_crust = 150;
-        break;
-      case "Gluten-Free":
-        pizza_crust = 130;
-        break;
-      case "Cripsy":
-        pizza_crust = 200;
-        break;
-      case "Stuffed":
-        pizza_crust = 160;
-        break;
-      default:
-        console.log("no price");
-    }
-    let pizza_topping = ptopping.length * 150;
-    console.log("toppings value" + pizza_topping);
-
-    if (psize == "0" && pcrust == "0") {
-      console.log("nothing selected");
-      $("button.proceed").show();
-      $("div.yourChoice").hide();
+  event.preventDefault();
+  $("form#formValidation").submit(function () {
+    var name = $("input#name").val();
+    var email = $("input#email").val();
+    var message = $("textarea#message").val();
+    if (name && email) {
       alert(
-        "Please select your favorite pizza-type, pizza-size and pizza-crust"
+        " Dear " +
+          name +
+          ", Thank you for reaching out to us. We have warmly received your message and we will get in touch."
       );
     } else {
-      $("button.proceed").hide();
-      $("#info").hide();
-      $("div.yourChoice").slideDown(1000);
+      alert(" There's an incomplete in this form. Please try again");
     }
+  });
+});
 
-    total = price + pizza_crust + pizza_topping;
-    console.log(total);
-    let checkoutTotal = 0;
-    checkoutTotal = checkoutTotal + total;
+/*PIZZA ORDER FUNTION */
+// Business Logic
 
-    $("#pizzatype").html($("#type  option:selected").val());
-    $("#pizzasize").html($("#size option:selected").val());
-    $("#pizzacrust").html($("#crust option:selected").val());
-    $("#pizzatopping").html(ptopping.join(", "));
-    $("#yourbill").html(total);
+var total_price, pizza_topping, pizza_crust, delivery_price;
+total = 0;
+function Orderpizza(type, size, topping, crust, delivery) {
+  this.type = type;
+  this.size = size;
+  this.topping = topping;
+  this.crust = crust;
+  this.delivery = delivery;
+}
 
-    // Add pizza button
-    $("button.qty").click(function () {
-      let type = $("#type option:selected").val();
-      let psize = $("#size option:selected").val();
-      let pcrust = $("#crust option:selected").val();
-      let ptopping = [];
-      $.each($("input[name='toppings']:checked"), function () {
-        ptopping.push($(this).val());
-      });
-      console.log(ptopping.join(", "));
-      switch (psize) {
-        case "0":
-          price = 0;
-          break;
-        case "Small":
-          price = 1000;
-          console.log(price);
-          break;
-        case "Medium":
-          price = 1200;
-          console.log(price);
-          break;
-        case "Large":
-          price = 1500;
-          console.log(price);
-        default:
-          console.log(error);
-      }
-      switch (pcrust) {
-        case "0":
-          pizza_crust = 0;
-          break;
-        case "Thick-Classic":
-          pizza_crust = 150;
-          break;
-        case "Cheese-Filled":
-          pizza_crust = 180;
-          break;
-        case "Pescara":
-          pizza_crust = 120;
-          break;
-        case "Deep-Dish":
-          pizza_crust = 150;
-          break;
-        case "Gluten-Free":
-          pizza_crust = 130;
-          break;
-        case "Cripsy":
-          pizza_crust = 200;
-          break;
-        case "Stuffed":
-          pizza_crust = 160;
-          break;
-        default:
-          console.log("No Price");
-      }
+Orderpizza.prototype.fullOrder = function () {
+  return (
+    this.type +
+    ", " +
+    this.size +
+    ", " +
+    this.crust +
+    ", " +
+    this.topping +
+    ", " +
+    this.delivery
+  );
+};
 
-      let pizza_topping = ptopping.length * 150;
-      console.log("toppings value" + pizza_topping);
+// User Interface Logic
 
-      total = price + pizza_crust + pizza_topping;
-      console.log(total);
+Orderpizza.prototype.totalPrice = function () {
+  return qualityPrice + pizzaTopping + pizzaCrust + deliveryCost;
+};
 
-      checkoutTotal = checkoutTotal + total;
-      console.log(checkoutTotal);
+var sizePrice = [1050, 1500, 1800];
+var toppingPrice = [50, 110, 50, 70, 80, 120, 100, 40, 90, 60, 60, 150, 90];
+var crustPrice = [150, 180, 120, 150, 130, 200, 160];
+var deliveryPrice = [300, 500, 0];
 
-      /*Users Interface Function*/
-
-      var newOrder = new Order(type, psize, pcrust, ptopping, total);
-
-      $("#ordersmade").append(
-        '<tr><td id="pizzatype">' +
-          newOrder.type +
-          '</td><td id="pizzasize">' +
-          newOrder.size +
-          '</td><td id="pizzacrust">' +
-          newOrder.crust +
-          '</td><td id="pizzatopping">' +
-          newOrder.topping +
-          '</td><td id="yourbill">' +
-          newOrder.total +
-          "</td></tr>"
-      );
-      console.log(newOrder);
-    });
-    // Checkout button
-    $("button#checkout").click(function () {
-      $("button#checkout").hide();
-      $("button.qty").hide();
-      $("button.delivery").slideDown("slow");
-      $("#additionalprice").slideDown("slow");
-      // console.log("Your Total Bill is Ksh. " + checkoutTotal);
-      console.log(
-        $("#pizzatotal").append("Your Bill is Ksh. " + checkoutTotal)
-      );
-    });
-
-    // On Delivery Button
-    $("button.delivery").click(function () {
-      $(".pizzatable").hide();
-      $(".yourChoice h2").hide();
-      $("#delivery").slideDown("slow");
-      $("#additionalprice").hide();
-      $("button.delivery").hide();
-      $("#pizzatotal").hide();
-      let deliveryTotal = checkoutTotal + 500;
-      // console.log("You will pay sh. " + deliveryTotal + " on delivery");
-      console.log(
-        $("#totalbill").append(
-          "Your bill plus delivery fee is: " + deliveryTotal
-        )
-      );
-    });
-
-    // Place Order Button
-    $("button#final-order").click(function (event) {
-      event.preventDefault();
-
-      $("#pizzatotal").hide();
-      $("#delivery").hide();
-      $("button#final-order").hide();
-      let deliveryTotal = checkoutTotal + 500;
-      console.log("Your Final Bill is: Ksh. " + deliveryTotal);
-      let personName = $("input#name").val();
-      let phone = $("input#phone").val();
-      let location = $("input#address").val();
-
-      if (
-        $("input#name").val() &&
-        $("input#phone").val() &&
-        $("input#address").val() != ""
-      ) {
-        $("#finalmessage").append(
-          personName +
-            ", Mustachio Pizzeria Management has recieved your order and it will be delivered to you at " +
-            location +
-            ". Your Final Bill Ksh. " +
-            deliveryTotal
-        );
-        $("#totalbill").hide();
-        $("#finalmessage").slideDown(1200);
-      } else {
-        alert("Please fill in your details for delivery!");
-        $("#delivery").show();
-        $("button#final-order").show();
-      }
-    });
+$(document).ready(function () {
+  $("#orderForm").submit(function (event) {
     event.preventDefault();
+    var type = parseInt($("#type").val());
+    // alert(type)
+    var size = parseInt($("#size").val());
+    // alert(size)
+    var topping = parseInt($("#topping").val());
+    // alert(topping)
+    var crust = parseInt($("#crust").val());
+    // alert(crust)
+    var quantity = parseInt($("input#qty").val());
+    // alert(quantity)
+    var delivery = ($("#delivery").val());
+    // alert(delivery)
+
+    qualityPrice = sizePrice[size - 1];
+    // alert(qualityPrice);
+    pizzaTopping = toppingPrice[topping - 1];
+    // alert(pizzaTopping);
+    pizzaCrust = crustPrice[crust - 1];
+    // alert(pizzaCrust);
+    deliveryCost = deliveryPrice[delivery - 1];
+    // alert(deliveryCost);
+
+    newgetpizza = new Orderpizza(type, size, topping, crust, delivery);
+    // alert("Your bill is  " + newgetpizza.fullOrder());
+
+    var checkOutTotal = 0;
+    checkOutTotal = qualityPrice + pizzaTopping + pizzaCrust ;
+    // alert(checkOutTotal);
+
+
+   if(delivery === "pickUp" && quantity > 0){
+     alert("Your Order is Ksh. " + checkOutTotal * quantity )
+   }
+   else if (delivery === "demand") {
+    prompt(" Please Enter Your Phone Number")
+    prompt("Enter Your Address For Your Delivery")
+    alert("Mustachio Pizzeria Management has recieved your order and it will be delivered to you " +
+    "Your Order is Ksh. " + (checkOutTotal * quantity )  + " and a charge of Ksh. 300 On Demand Delivery")
+    alert.appendTo("#summary")
+
+   } else if(delivery === "scheduled"){
+    prompt(" Please Enter Your Phone Number")
+    prompt("Enter Your Address For Your Delivery")
+    alert("Mustachio Pizzeria Management has recieved your order and it will be delivered to you " + " Your Order is Ksh. " + (checkOutTotal * quantity )  + " and a charge of Ksh. 500 Scheduled On-Demand Delivery")
+   }
   });
 });

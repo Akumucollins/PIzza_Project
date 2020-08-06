@@ -158,9 +158,6 @@
                     <a href="#portfolio"
                         class="btn-element btn-element-0 btn  btn-lined btn-md bg-success text-white"><span>Find Out
                             More</span></a>
-                    <div class="vertical-line" id="vertical">
-                        <p class="pl-3 text-uppercase font-weight-bold">About Us</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -181,9 +178,6 @@
                 <div class="col-md-5">
                     <img class="ml-5" src="images/background_2.jpg" height=440px width=80%>
                 </div>
-            </div>
-            <div class="vertical-line" id="vertix">
-                <p class="pl-3 text-uppercase font-weight-bold">What's Our Infinite Mission</p>
             </div>
         </div>
     </div>
@@ -402,170 +396,87 @@
     </div>
     <!--End Of Portfolio Section-->
     <!--Placing Your Order Section-->
-    <div class="container-fluid order" id="make-order">
-        <h2 class="text-warning font-weight-bold text-center">Order your pizza here and we will deliver it to you at
-            your door step!</h2>
-        <div class="order-overlay">
-            <div class="controls-top" id="Order-now">
-                <form>
-                    <!--Pizza Type-->
-                    <label for="select" class="pt-3 type">Select Your Favorite Pizza Here:</label>
-                    <select class="browser-default custom-select custom-select-lg mb-3 " id="type">
-                        <option value="type">Pizza-Type</option>
-                        <option value="Margherita Pizza">Margherita Pizza</option>
-                        <option value="Capricciosa Pizza">Capricciosa Pizza</option>
-                        <option value="Vegetariana Pizza">Vegetariana Pizza</option>
-                        <option value="Marinara Pizza">Marinara Pizza</option>
-                        <option value="Pepperoni Pizza">Pepperoni Pizza</option>
-                        <option value="Napolitana Pizza">Napolitana Pizza</option>
-                        <option value="Funchi Pizza">Funchi Pizza</option>
-                        <option value="Truffled-Chicken Pizza">Truffled Chicken Pizza</option>
-                        <option value="Mussles Pizza">Mussles Pizza</option>
-                        <option value="Steak-Crusted Pizza">Steak Crusted</option>
-                        <option value="Chicken-Farro Pizza">Chicken Farro</option>
-                        <option value="Black-Pepper Pizza">Black Pepper Pizza</option>
+    <div class="container-fluid" id="order">
+        <div class="order-pizza">
+            <h2 class="text-warning font-weight-bold text-center">Order your pizza here and we will deliver it to you at
+                your door step!</h2>
+            <form id="orderForm">
+                <div class="container">
+                    <!--Type Option-->
+                    <label for="select" class="text-white">Select Your Favorite Pizza Here:</label>
+                    <select class="form-control browser-default custom-select custom-select-lg mb-3" id="type" required>
+                        <!-- <option>Pizza-Type</option> -->
+                        <option value="1">Margherita Pizza</option>
+                        <option value="2">Capricciosa Pizza</option>
+                        <option value="3">Capricciosa Pizza</option>
+                        <option value="4">Marinara Pizza</option>
+                        <option value="5">Pepperoni Pizza</option>
+                        <option value="6">Napolitana Pizza</option>
+                        <option value="7">Funchi Pizza</option>
+                        <option value="8">Truffled Pizza</option>
+                        <option value="9">Mussles Pizza</option>
+                        <option value="10">Steak Crusted</option>
+                        <option value="11">Chicken Farro</option>
+                        <option value="12">Black Pepper Pizza</option>
                     </select>
-                    <!-- End  Of Pizza Type-->
-                    <!--Pizza Size-->
-                    <label for="select" class="pt-3 size">Select Your Favorite Pizza-Size Here:</label>
-                    <select class="browser-default custom-select custom-select-lg mb-3" id="size">
-                        <option value="0">Pizza-Size</option>
-                        <option value="Small">Small---ksh.1000</option>
-                        <option value="Medium">Medium--Ksh.1200</option>
-                        <option value="Large">Large---Ksh.1500</option>
+                    <!--Size Option-->
+                    <label for="select" class="text-white">Select Your Favorite Pizza-Size Here:</label>
+                    <select class="form-control browser-default custom-select custom-select-lg mb-3" id="size" required>
+                        <!-- <option>Pizza-Size</option> -->
+                        <option value="1">Small---ksh.1050</option>
+                        <option value="2">Medium--Ksh.1500</option>
+                        <option value="3">Large---Ksh.1800</option>
                     </select>
-                    <!-- End  Of Pizza Size-->
-                    <!--Pizza Crusts-->
-                    <label for="crust" class="pt-3 crust">Select Your Favorite Pizza-Crusts Here:</label>
-                    <select class="browser-default custom-select custom-select-lg mb-3" id="crust">
-                        <option value="0">Pizza-Crust</option>
-                        <option value="Thick-Classic">Thick-Classic---Ksh.150</option>
-                        <option value="Cheese-Filled">Cheese-Filled---Ksh.180</option>
-                        <option value="Pescara">Pescara---Ksh.120</option>
-                        <option value="Deep-Dish">Deep-Dish---Ksh.150</option>
-                        <option value="Gluten-Free">Gluten-Free---Ksh.130</option>
-                        <option value="Cripsy">Cripsy---Ksh.200</option>
-                        <option value="Stuffed">Stuffed---Ksh.160</option>
+                    <!--Topping Option-->
+                    <label for="topping" class="text-white">Select Your Favorite Pizza-Toppings Here:</label>
+                    <select class="form-control browser-default custom-select custom-select-lg mb-3" id="topping"
+                        required>
+                        <!-- <option>Pizza-Topping</option> -->
+                        <option value="1">Mushroom---Ksh.50</option>
+                        <option value="2">Sausage---Ksh.110</option>
+                        <option value="3">Onions---Ksh.50</option>
+                        <option value="4">Bacon---Ksh.70</option>
+                        <option value="5">Pepperoni---Ksh.80</option>
+                        <option value="6">Extra-Cheese---Ksh.120</option>
+                        <option value="7">Black-Olives---Ksh.100</option>
+                        <option value="8">Green-Peppers---Ksh.40</option>
+                        <option value="9">Pineapple---Ksh.90</option>
+                        <option value="10">Spinach---Ksh.60</option>
+                        <option value="11">Romaine---Ksh.150</option>
+                        <option value="12">Tomato---Ksh.90</option>
                     </select>
-                    <!--End Of Pizza Crusts-->
-                    <br>
-                    <!--Pizza Toppings-->
-                    <label for="Toppings">Select Your Favorite Pizza-Toppings Here @ ksh. 150 each :</label>
-                    <br>
-                    <div class="topping">
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms"
-                                        name="toppings">
-                                    <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
-                                </div>
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Romanie" value="Romanie"
-                                        name="toppings">
-                                    <label class="custom-control-label" for="Romanie">Romanie</label>
-                                </div>
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Black-Olives"
-                                        value="Black-Olives" name="toppings">
-                                    <label class="custom-control-label" for="Black-Olives">Black-Olives</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Pineapple" value="Pineapple"
-                                        name="toppings">
-                                    <label class="custom-control-label" for="Pineapple">Pineapple</label>
-                                </div>
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage"
-                                        name="toppings">
-                                    <label class="custom-control-label" for="Sausage">Sausage</label>
-                                </div>
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Extra-Cheese"
-                                        value="Extra-Cheese" name="toppings">
-                                    <label class="custom-control-label" for="Extra-Cheese">Extra-Cheese</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Pepperoni" value="Pepperoni"
-                                        name="toppings">
-                                    <label class="custom-control-label" for="Pepperoni">Pepperoni</label>
-                                </div>
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Spinach" value="Spinach"
-                                        name="toppings">
-                                    <label class="custom-control-label" for="Spinach">Spinach</label>
-                                </div>
-                                <div class="custom-control custom-checkbox checkbox-lg custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Green-Peppers"
-                                        value="Green-Peppers" name="toppings">
-                                    <label class="custom-control-label" for="Green-Peppers">GreenPepper</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Pizza Toppings-->
-                    <br>
-                    <button type="submit" class="btn btn-success proceed">Check Your Order</button>
-
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- End Of Placing Your Order Section-->
-    <!--Placed Order Summary Validation Section-->
-    <div class="containe-fluid text-center">
-        <div class="yourChoice">
-            <h2>Your Order is:</h2>
-            <div id="yourOrder">
-                <table class="table table-md  pizzatable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Pizza-Type</th>
-                            <th scope="col">Pizza-Size</th>
-                            <th scope="col">Pizza-Crust</th>
-                            <th scope="col">Pizza-Topping</th>
-                            <th scope="col">Your-Bill</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ordersmade">
-                        <tr>
-                            <td id="pizzatype"></td>
-                            <td id="pizzasize"></td>
-                            <td id="pizzacrust"></td>
-                            <td id="pizzatopping"></td>
-                            <td id="yourbill"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p id="pizzatotal"></p>
-                <p id="totalbill"></p>
-                <p id="additionalprice">Delivery will cost sh. 500</p>
-                <p id="finalmessage"></p>
-            </div>
-            <button class="btn btn-success qty">Quantity</button>
-            <button class="btn btn-success" id="checkout">Checkout</button>
-            <button class="btn btn-success delivery">On Delivery</button>
-        </div>
-        <div id="delivery">
-            <form>
-                <div class="form-group">
-                    <input type="text" id="name" class="form-control mb-3" placeholder=" Enter Your Fullname...">
-                    <input type="number" id="phone" class="form-control mb-3" placeholder=" Enter Your Phone Number...">
-                    <input type="text" id="address" class="form-control mb-3" placeholder=" Enter Your Address...">
-                    <button class="btn btn-orange" id="final-order">Place Your Order</button>
+                    <!--Crust Option-->
+                    <label for="crust" class="text-white">Select Your Favorite Pizza-Crusts Here:</label>
+                    <select class="form-control browser-default custom-select custom-select-lg mb-3" id="crust"
+                        required>
+                        <!-- <option>Pizza-Crust</option> -->
+                        <option value="1">Thick-Classic---Ksh.150</option>
+                        <option value="2">Cheese-Filled---Ksh.180</option>
+                        <option value="3">Pescara---Ksh.120</option>
+                        <option value="4">Deep-Dish---Ksh.150</option>
+                        <option value="5">Gluten-Free---Ksh.130</option>
+                        <option value="6">Cripsy---Ksh.200</option>
+                        <option value="7">Stuffed---Ksh.160</option>
+                    </select>
+                    <!--Quantity Option-->
+                    <label for="quantity" class="text-white">Place Your Quantity Order Here:</label>
+                    <input type="number" id="qty" class="form-control form-control-lg  my-1 mr-sm-2l" name="quantity"
+                        min="1" placeholder="What's Your Prefered Quantity" required>
+                    <!--Delivery Option-->
+                    <label for="delivery" class="text-white">Select Your Favorite Pizza-Delivery-Option Here:</label>
+                    <select class="form-control browser-default custom-select custom-select-lg mb-3" id="delivery"
+                        required>
+                        <!-- <option>Delivery-Options</option> -->
+                        <option value="demand">On-Demand Delivery</option>
+                        <option value="scheduled">Scheduled On-Demand Delivery</option>
+                        <option value="pickUp">Self Pick-up</option>
+                    </select>
+                    <!--Submit Button-->
+                    <button type="submit" id="btn" class="form-control form-control-lg  btn-success">checkout</button>
                 </div>
             </form>
         </div>
-    </div>
-    <!--End Of Placed Order Summary Validation Section-->
+    <!-- End Of Placing Your Order Section-->
     <!--Contact Section-->
     <div class="container-fluid bg-warning contactUs">
         <div id="contactUs">
@@ -625,6 +536,7 @@
                 </div>
             </div>
         </div>
+        <h6 class="text-center font-weight-bold">Copyright (c) 2020 Collins Akumu</h6>
     </div>
     <!-- End Of Contact Section -->
 

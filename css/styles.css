@@ -278,10 +278,6 @@ height: 470px;
 .aboutus {
   padding-left: 10%;
 }
-#vertical {
-  margin-left: 1%;
-  height: 6%;
-}
 
 /* Our Mission Style */
 
@@ -320,7 +316,7 @@ height: 470px;
 #menu {
   background-size: cover;
   background-image: url("../images/menu.jpeg");
-  height: 182vh;
+  height: 197vh;
   border-radius: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -390,88 +386,19 @@ h3 {
 
 /* Placing Order Style */
 
-.order h2 {
-  text-align: center;
-  font-size: 30px;
-}
-
-.order {
-  background-attachment: fixed;
-  background-image: url("../images/background_2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-}
-.order-overlay {
-  background-color: rgba(0, 0, 0, 0.9);
-  margin-left: 2%;
-  margin-right: 2%;
-  padding-bottom: 20px;
-  padding-left: 6%;
+.order-pizza {
+  height: inherit;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
-  margin-left: 2%;
-  margin-right: 2%;
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
-.topping {
-  display: flex;
-  font-size: 16.5px;
-}
-.type,
-.size,
-.crust {
-  font-size: 22px;
+  background-image: url("../images/background_2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 150vh;
   font-family: "Poppins", sans-serif;
 }
-
-/* Order Summary Style */
-.yourChoice {
-  display: none;
-  padding-left: 2%;
-  padding-right: 2%;
-  color: black;
-}
-.delivery {
-  display: none;
-}
-#delivery {
-  display: none;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-td,
-th {
+label{
   font-size: 25px;
-  color: black;
-  font-family: "Poppins", sans-serif;
-}
-.yourChoice h2 {
-  color: yellow;
-  text-align: left;
-}
-#yourOrders {
-  color: black;
-  font-size: 30px;
-}
-
-#additionalprice {
-  display: none;
-}
-#finalmessage {
-  display: none;
-  padding-top: 10%;
-  padding-right: 10%;
-  padding-left: 10%;
-  font-size: 28px;
-  font-family: "Poppins", sans-serif;
 }
 
 @media only screen and (max-width: 485px) {
